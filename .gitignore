@@ -1,0 +1,6 @@
+# Keep this public repo as downloads-only.
+*
+!README.md
+!CHECKSUMS-SHA256.txt
+!SUDARSHAN_BETAUSER_WINDOWS_EXE.zip
+!.gitignore
