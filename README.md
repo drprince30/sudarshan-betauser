@@ -38,12 +38,12 @@ Get-FileHash -Algorithm SHA256 .\SUDARSHAN_BETAUSER_WINDOWS_EXE.zip
 Expected SHA256:
 
 ```text
-A49C63D777CE6FE9696D5A31732F4A6712755E8B362933F8DCF375E80B6DCACB
+9615A4CCECF4E8C33C0192ADF570007345651BB27F13718000A9EE2007159BDE
 ```
 
 ## Build Notes
 
 - Build version: `0.1.1`
-- Source commit used by private build pipeline: `b470728`
+- Source commit used by private build pipeline: `5382dc0`
 - Windows may show a security warning for unsigned beta builds.
 - Use only on repositories you own or are authorized to test.
