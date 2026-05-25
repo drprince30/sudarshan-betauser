@@ -1,34 +1,49 @@
-﻿# Sudarshan Beta User Download
+# Sudarshan Beta User Download
 
-This public repository is for beta downloads only.
+This public repository is for beta downloads only. It does not contain Sudarshan private source code, tests, datasets, training files, secrets, tokens, or model weights.
 
-The private Sudarshan source repository is not published here. This repo intentionally contains only packaged download artifacts, manifest, and checksum metadata.
+## Download And Run
 
-## Download
+1. Download `SUDARSHAN_BETAUSER_WINDOWS_EXE.zip`.
+2. Extract the ZIP.
+3. Open the extracted folder.
+4. Run `Sudarshan.exe`.
+5. Sudarshan opens on localhost, usually `http://127.0.0.1:8767`.
 
-- SUDARSHAN_BETAUSER_WINDOWS_EXE.zip - Windows packaged beta build
-- SUDARSHAN_BETAUSER_MANIFEST.json - build manifest for the ZIP
+## First Run Local Model Setup
+
+Sudarshan is local-first. Your code stays on your machine. The selected local AI model runs through Ollama on localhost. Sudarshan does not upload your repository to our server.
+
+If Ollama is not installed, install it from https://ollama.com/download, then restart Sudarshan or click Recheck on the setup page.
+
+Choose the model that fits your hardware:
+
+- `qwen2.5-coder:0.5b`: fastest, lowest quality
+- `qwen2.5-coder:1.5b`: light
+- `qwen2.5-coder:3b`: recommended for 16GB RAM
+- `qwen2.5-coder:7b`: better quality, slower/heavier
+- `qwen2.5-coder:14b`: advanced/heavy
+- `qwen2.5-coder:32b`: advanced/heavy
+
+First run can pull the selected model using Ollama, test it locally, and save the choice. Qwen model weights are not bundled in this ZIP.
 
 ## Verify
 
 Use PowerShell:
 
-``powershell
+```powershell
 Get-FileHash -Algorithm SHA256 .\SUDARSHAN_BETAUSER_WINDOWS_EXE.zip
-``
+```
 
 Expected SHA256:
 
-``text
-9E80F1ED6CA3AFEA180923166F93298C0B0E42076EE5AAD8100741C4F239FADF
-``
+```text
+3B587DD7F54A7AA838E9C54990E3B5660D03740E720B9B06397F6E92A9F4D8C2
+```
 
-## Notes
+## Build Notes
 
-- Build version: 0.1.0
-- Source commit used by private build pipeline: 18c4ee6
+- Build version: `0.1.1`
+- Source commit used by private build pipeline: `b470728`
 - Windows may show a security warning for unsigned beta builds.
 - Use only on repositories you own or are authorized to test.
-- This beta is local-first and defensive-use only.
-- Qwen model weights are not bundled. Beta users can install Ollama separately and run ollama pull qwen2.5-coder:7b.
-- No GitHub token or private source repository access is required for beta users.
